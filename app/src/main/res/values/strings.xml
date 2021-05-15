@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mahjong</string>
+    <string name="easy">easy</string>
+    <string name="middle">middle</string>
+    <string name="hard">hard</string>
+    <string name="welcome_to_mahjong">Welcome to Mahjong!</string>
+    <string name="come_back">Come back</string>
+</resources>
