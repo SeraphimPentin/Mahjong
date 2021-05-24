@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.concurrent.fixedRateTimer
 
 class CardsAdapter(private val data: ArrayList<CardData>) : RecyclerView.Adapter<CardViewHolder>() {
 
@@ -71,15 +70,11 @@ class CardsAdapter(private val data: ArrayList<CardData>) : RecyclerView.Adapter
                                                 holder2 = null
 
                                             }
-                                            holder1?.textView?.text.toString() !=
-                                                    holder2?.textView?.text.toString() -> {
-
-                                                holder1?.cardView?.isInvisible
-                                                holder2?.cardView?.isInvisible
-                                            }
                                             else -> {
-                                                holder1?.cardView?.animate()?.rotationY(180f)
-                                                holder2?.cardView?.animate()?.rotationY(180f)
+                                                holder1?.cardView?.animate()
+                                                    ?.rotationY(0f)?.duration = 150
+                                                holder2?.cardView?.animate()
+                                                    ?.rotationY(0f)?.duration = 150
                                             }
                                         }
 
